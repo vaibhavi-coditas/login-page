@@ -1,6 +1,7 @@
 <div class="card">
 
-    <h1 class="header">Home</h1>
+    <h1 class="header">Dashboard</h1>
+    <a [routerLink]="['/login']">Logout</a>
 
     <table>
         <thead>
@@ -8,12 +9,14 @@
                 <th>email</th>
                 <th>username</th>
                 <th>action</th>
+
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let user of List">
-                <td>{{ user.email }}</td>
-                <td>{{ user.username }}</td>
+                <td>{{ user.userName }}</td>
+                <td>{{ user.email}}</td>
+                <button type="submit"> EDIT</button>
             </tr>
 
         </tbody>

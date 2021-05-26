@@ -1,46 +1,15 @@
-
-body {
-    background-image: url("https://img.freepik.com/free-photo/green-bokeh-nature-blur-background-element-design_1150-12451.jpg?size=626&ext=jpg&ga=GA1.2.1149860058.1620691200");
-    background-repeat: no-repeat;
-    background-size:  cover;
-    height: 777px;
-    padding: 0px;
-    margin: 0px;
-    
-    
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 666px;
+    background-size: 100%;
 }
-h3{
-    text-align: center;
-    margin-top: 12px;
-    color:brown;
-    font-size: 34px;
-    text-decoration: underline;
+.form{
+    border: 2px solid red;
+    width: 444px;
+    padding: 12px;
+    margin: auto;
 }
-.bd{
-    display: block;
-    
-    width: 500px;
-    height: 289px;
+input{
     padding: 4px;
-    margin:  113px auto;
-    text-align: center;
-    
-
-}
-form{
-    margin-top: 8px;
-}
-form input{
-    width: 270px;
-    padding: 14px;
-    margin: 12px;
-    border: 1px solid black;
-}
-.bt{
-    padding: 4px;
-    margin: 7px;
-    font-size: 16px;
-    text-align: center;
-    width: 230px
-   
+    margin: 4px;
 }
