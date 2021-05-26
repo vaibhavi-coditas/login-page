@@ -1,0 +1,16 @@
+.body
+.btn{
+    position: absolute;
+    right: 2px;
+    margin-right: 44px;
+    margin-top: 44px;
+}
+
+.dashboard{
+    border: 2px solid red;
+    width: 65%;
+   
+    margin: auto;
+    height: 340px;
+    margin-top: 98px;
+}
