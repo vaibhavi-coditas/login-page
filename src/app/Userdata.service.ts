@@ -1,10 +1,14 @@
-import { Injectable } from "@angular/core";
+import { isNgTemplate } from '@angular/compiler';
+import { Injectable } from '@angular/core';
 
 @Injectable({
-    providedIn: 'root',
-  })
-export class UserDataService{
-  constructor() { }
+  providedIn: 'root'
+})
+export class UserDataService {
+
+  constructor() { 
+    console.log('ON INIT user service');
+  }
 
   saveUser(user: any) {
     const tempList = this.fetchFromLocalStorage();
@@ -12,6 +16,7 @@ export class UserDataService{
     tempList.push(user);
     this.storeInLocalStorage(JSON.stringify(tempList));
   }
+
 
   verifyUser(user: any) {
     const tempList = this.fetchFromLocalStorage();
@@ -26,7 +31,7 @@ export class UserDataService{
   }
 
   storeInLocalStorage(List:any) {
-    localStorage.setItem('userList', List);
+    localStorage.setItem('userList',List);
   }
 
   fetchFromLocalStorage() {
@@ -35,5 +40,3 @@ export class UserDataService{
   }
 
 }
-
-

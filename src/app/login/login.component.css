@@ -1,3 +1,5 @@
+
+
 body{
     background-image: url("https://img.freepik.com/free-photo/green-bokeh-nature-blur-background-element-design_1150-12451.jpg?size=626&ext=jpg&ga=GA1.2.1149860058.1620691200");
     background-repeat: no-repeat;
@@ -9,13 +11,9 @@ form{
     border: 2px solid #93bd3e;
     border-radius: 5px;
     background-color: #93bd3e;
-    display: block;
-    width: 34%;
+    width: 444px;
+    padding: 12px;
     margin: auto;
-    padding: 62px;
-    margin-top: 177px;
-    text-align: center;
-    height: 217px
 }
 input{
     

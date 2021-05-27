@@ -1,20 +1,27 @@
 <div class="container">
 
-    <h1 class="header">Login Form</h1>
+    <h3 class="header">Login Form</h3>
 
-    <form [formGroup]="loginForm" class="form" (ngSubmit)="onLogin">
+    <form [formGroup]="loginForm" class="form" (ngSubmit)="onLogin(loginForm.value)">
+        <label>
         <div class="form-group">
+            Enter Registered User Name:
             <input class="form-control" type="text" placeholder="userName" formControlName="userName">
         </div>
+        </label>
+
+        <label>
         <div class="form-group">
-            <input class="form-control" type="text" placeholder="password" formControlName="password">
+            Enter Password:
+            <input class="form-control" type="password" placeholder="password" formControlName="password">
         </div>
+        </label>
 
-        <div class="form-footer">
-
-             <a [routerLink]="['/dashboard']">Login</a>
+       <div class="form-footer">
+            <button type="submit"> Login
+            </button> <br>
+            <button class="btn btn-link" routerLink="/register" type="reset">New User ?</button>
         </div>
-        <a [routerLink]="['/register']">New User</a>
     </form>
 
 </div>

@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
   onRegister(value: any) {
     console.log(value);
     this.userDataService.saveUser(value);
-    alert('User Saved!');
+    alert('Registered Succesfully!');
   }
  
 }

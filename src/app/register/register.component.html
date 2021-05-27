@@ -1,35 +1,37 @@
 <div class="container">
-    <h3> Register </h3>
+
+    <h3 class="header">Registration Form</h3>
+
     <form [formGroup]="registerForm" class="form" (ngSubmit)="onRegister(registerForm.value)">
-        <br><label>
-        <div class="form-group">
-            userName:
-            <input type="text" formControlName="userName" required>
-        </div>
-        </label><br>
-        
         <label>
         <div class="form-group">
-            Email:
-            <input type="text" formControlName="email" required>
+            Enter Name:
+            <input class="form-control" type="text" placeholder="userName" formControlName="userName">
+            <div class="error" *ngIf="!registerForm.controls['userName'].valid && registerForm.controls['userName'].touched">* You must enter a user name.</div>
         </div>
-        </label><br>
+        </label>
+
+<label>
+        <div class="form-group">
+            Enter Email:
+            <input class="form-control" type="text" placeholder="email" formControlName="email">
+            <div class="error" *ngIf="!registerForm.controls['email'].valid && registerForm.controls['email'].touched">* You must enter a email.</div>
+        </div>
+        </label>
 
         <label>
         <div class="form-group">
-            Password:
-            <input type="password" formControlName="password" required>
+            Enter Password:
+            <input class="form-control" type="text" placeholder="password" formControlName="password">
+            <div class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">* You must enter a password.</div>
         </div>
-        </label><br>
-
-
-        <div class="form-group">
-            <button type="submit"> Sign up </button>
-        </div><br>
-
-        <div class="form-group">
-            <a [routerLink]="['/login']">Already a user</a>
-        </div>
+        </label>
         
+
+        <div class="form-footer">
+            <button class="btn btn-round" type="submit" [disabled]="!registerForm.valid">Register</button>
+            <button class="btn btn-link" routerLink="/login" type="reset">Already a User!</button>
+        </div>
     </form>
+
 </div>
