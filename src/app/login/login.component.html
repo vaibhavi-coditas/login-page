@@ -7,6 +7,7 @@
         <div class="form-group">
             Enter Registered User Name:
             <input class="form-control" type="text" placeholder="userName" formControlName="userName">
+            <div class="error" *ngIf="!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched">* Enter valid UserName.</div>
         </div>
         </label>
 
@@ -14,6 +15,7 @@
         <div class="form-group">
             Enter Password:
             <input class="form-control" type="password" placeholder="password" formControlName="password">
+            <div class="error" *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">* Enter valid Password.</div>
         </div>
         </label>
 
